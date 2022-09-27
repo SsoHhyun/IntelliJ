@@ -5,10 +5,12 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
-
+@SpringBootTest
+@Transactional // 자동으로 데이터 비워줌, 게속해서 테스트 가능
 class MemberServiceTest {
 
 //    MemberService memberService = new MemberService(memberRepository);
